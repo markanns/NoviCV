@@ -1,0 +1,83 @@
+
+.book {
+    background-image: linear-gradient(105deg, rgba(rgb(70, 70, 70), .9) 0%, rgba(white, .9) 50%, transparent 50%), url(../images/nat-10.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+    &__form {
+        width: 50%; 
+    }
+}
+
+.form {
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 3%;
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1rem;
+        font-family: inherit;
+        border-radius: 2px;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem black;
+            border-bottom: 3px solid gray;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid rgb(187, 185, 185);
+        }
+
+        &::-webkit-input-placeholder {
+            color: #999;
+            padding-left: 10px;
+        }
+    }
+
+    .heading-secondary {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background-image: linear-gradient(to right, #bebbbb ,#f6e9d9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all .2s;
+        letter-spacing: .2rem;
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba(black, .2)
+        }
+    }
+    .imeIEmail {
+        display: flex;
+    }
+    .btn {
+        margin:20px;
+        @include praviloZaDugme;
+        padding: 10px;
+    }
+
+    .success{
+        color:green;
+
+    }
+    .error{
+        color: red;
+        margin-left: 5px;
+    }
+
+    textarea{
+        resize: none;
+    }
+}

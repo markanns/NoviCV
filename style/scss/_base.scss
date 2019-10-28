@@ -1,0 +1,45 @@
+html {
+    background: linear-gradient(to right, #f4f4f4, #373737);
+    font-family: 'Playfair Display', serif;
+
+    @include respond(phone) {
+        background: none;
+    }
+
+    body {
+        margin: 2% auto;
+        padding: 0;
+        box-sizing: border-box;
+        width: 92vw;
+        border-radius: 8px;
+        box-shadow: 8px 8px 10px rgba(211, 211, 211, 0.425);
+        background-color: white;
+        display: grid;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        @include respond(phone) {
+            box-shadow: none;
+        }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .goUp {
+        position: fixed;
+        bottom: 40px;
+        right: 50px;
+    }
+}
+
+::selection {
+    background-color: lightgray;
+    color: white;
+}

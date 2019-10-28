@@ -1,0 +1,95 @@
+nav {
+    @include respond(phone) {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+
+        li {
+            list-style-type: none;
+
+            &:not(:first-child) {
+                border-right: 0.5px solid gray;
+                height: 45px;
+                padding-top: 3%;
+                padding-right: 10px;
+            }
+
+            @include praviloZaDugme;
+
+        }
+
+        @include respond(tab-port) {
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+.forPhone {
+    display: block;
+    margin: auto;
+}
+
+.divForPhone {
+    background-color: #878D89;
+}
+
+.imgText {
+    height: 70vh;
+    background-image: url(../images/pozadina3.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+
+    @include respond(smallPhone) {
+        display: none;
+    }
+
+    p {
+        position: relative;
+        top: 10%;
+        left: 10%;
+        color: white;
+        width: 40%;
+        animation: moveInLeft 1.5s ease-out;
+        font-size: 18px;
+        text-align: justify;
+
+        @include respond(tab-port) {
+            width: 60%;
+        }
+
+        @include respond(smallPhone) {
+            display: none;
+        }
+    }
+
+    h1 {
+        color: white;
+        text-shadow: 5px 2px 2px black;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        margin: 0;
+        width: 30%;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        @include respond(smallPhone) {
+            display: none;
+        }
+    }
+}
